@@ -1,6 +1,8 @@
 <p align="center">
   <img src="assets/banner.svg" width="100%">
 </p>
+
+
 # Kizuna 絆: Cross-Border Strategic Intelligence Suite
 Every Western tech giant relies on Asian supply chains—Taiwan for chips, Korea for displays, and Japan for precision robotics. But when American enterprises review overseas bids, they are flying blind.
 
