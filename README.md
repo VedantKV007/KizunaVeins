@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/VedantKV007/VedantKV007/main/banner.svg" alt="kizuna banner" width="100%"/>
+  <img src="https://raw.githubusercontent.com/VedantKV007/VedantKV007/master/banner.svg" alt="kizuna banner" width="100%"/>
 </p>
 
 # Kizuna 絆: Cross-Border Strategic Intelligence Suite
