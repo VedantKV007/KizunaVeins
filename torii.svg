@@ -1,143 +1,270 @@
-<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="500" viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg">
 
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#050816"/>
-      <stop offset="100%" stop-color="#111827"/>
-    </linearGradient>
+<defs>
 
-    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00eaff"/>
-      <stop offset="100%" stop-color="#ff006e"/>
-    </linearGradient>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#030712"/>
+    <stop offset="50%" stop-color="#0f172a"/>
+    <stop offset="100%" stop-color="#020617"/>
+  </linearGradient>
 
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+  <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#00F5FF"/>
+    <stop offset="100%" stop-color="#FF006E"/>
+  </linearGradient>
 
-    <pattern id="circuit" width="80" height="80" patternUnits="userSpaceOnUse">
-      <path d="M10 10 H40 V30 H70"
-            stroke="#00eaff"
-            stroke-width="2"
-            fill="none"
-            opacity="0.4"/>
-      <circle cx="40" cy="30" r="3" fill="#00eaff"/>
-    </pattern>
-  </defs>
+  <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
 
-  <!-- Background -->
-  <rect width="1200" height="800" fill="url(#bg)"/>
+  <filter id="softGlow">
+    <feGaussianBlur stdDeviation="10"/>
+  </filter>
 
-  <!-- Futuristic skyline -->
-  <g opacity="0.25">
-    <rect x="100" y="300" width="60" height="250" fill="#00eaff"/>
-    <rect x="220" y="220" width="80" height="330" fill="#00eaff"/>
-    <rect x="380" y="180" width="100" height="370" fill="#00eaff"/>
-    <rect x="700" y="200" width="70" height="350" fill="#00eaff"/>
-    <rect x="900" y="140" width="120" height="410" fill="#00eaff"/>
-    <rect x="1080" y="260" width="60" height="290" fill="#00eaff"/>
-  </g>
+  <pattern id="circuitPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+    <path d="M20 20 H60 V40 H100"
+          stroke="#00F5FF"
+          stroke-width="1"
+          fill="none"
+          opacity="0.2"/>
+    <circle cx="60" cy="40" r="2" fill="#00F5FF" opacity="0.3"/>
+  </pattern>
 
-  <!-- Torii Gate -->
-  <g filter="url(#glow)">
+</defs>
 
-    <!-- Top beam -->
-    <rect x="220" y="120"
-          width="760"
-          height="50"
-          rx="8"
-          fill="#101827"
-          stroke="url(#neon)"
-          stroke-width="4"/>
+<!-- Background -->
 
-    <!-- Curved roof extensions -->
-    <path d="M220 120
-             Q150 90 120 100
-             L120 140
-             Q160 150 220 170 Z"
-          fill="#101827"
-          stroke="#ff006e"
-          stroke-width="3"/>
+<rect width="1600" height="500" fill="url(#bgGrad)"/>
 
-    <path d="M980 120
-             Q1050 90 1080 100
-             L1080 140
-             Q1040 150 980 170 Z"
-          fill="#101827"
-          stroke="#ff006e"
-          stroke-width="3"/>
+<!-- Circuit texture -->
 
-    <!-- Secondary beam -->
-    <rect x="280" y="240"
-          width="640"
-          height="40"
-          fill="#101827"
-          stroke="#00eaff"
-          stroke-width="3"/>
+<rect width="1600" height="500"
+      fill="url(#circuitPattern)"
+      opacity="0.35"/>
 
-    <!-- Pillars -->
-    <rect x="320" y="170"
-          width="90"
-          height="420"
-          fill="url(#circuit)"
-          stroke="url(#neon)"
-          stroke-width="4"/>
+<!-- Animated digital rain -->
 
-    <rect x="790" y="170"
-          width="90"
-          height="420"
-          fill="url(#circuit)"
-          stroke="url(#neon)"
-          stroke-width="4"/>
+<g opacity="0.15">
 
-    <!-- Center plaque -->
-    <rect x="525"
-          y="155"
-          width="150"
-          height="120"
-          fill="#0f172a"
-          stroke="#ff006e"
-          stroke-width="3"/>
+  <line x1="150" y1="-100" x2="150" y2="600" stroke="#00F5FF">
+    <animateTransform attributeName="transform"
+      type="translate"
+      values="0,-400;0,400"
+      dur="5s"
+      repeatCount="indefinite"/>
+  </line>
 
-    <text x="600"
-          y="205"
-          text-anchor="middle"
-          font-size="32"
-          fill="#ff006e"
-          font-family="monospace">
-      未来
-    </text>
+  <line x1="350" y1="-100" x2="350" y2="600" stroke="#00F5FF">
+    <animateTransform attributeName="transform"
+      type="translate"
+      values="0,-500;0,500"
+      dur="4s"
+      repeatCount="indefinite"/>
+  </line>
 
-    <text x="600"
-          y="245"
-          text-anchor="middle"
-          font-size="24"
-          fill="#00eaff"
-          font-family="monospace">
-      Garden
-    </text>
+  <line x1="650" y1="-100" x2="650" y2="600" stroke="#00F5FF">
+    <animateTransform attributeName="transform"
+      type="translate"
+      values="0,-400;0,400"
+      dur="6s"
+      repeatCount="indefinite"/>
+  </line>
 
-  </g>
+  <line x1="950" y1="-100" x2="950" y2="600" stroke="#00F5FF">
+    <animateTransform attributeName="transform"
+      type="translate"
+      values="0,-500;0,500"
+      dur="5.5s"
+      repeatCount="indefinite"/>
+  </line>
 
-  <!-- Ground reflection -->
-  <ellipse cx="600"
-           cy="680"
-           rx="350"
-           ry="60"
-           fill="#00eaff"
-           opacity="0.15"/>
+  <line x1="1250" y1="-100" x2="1250" y2="600" stroke="#00F5FF">
+    <animateTransform attributeName="transform"
+      type="translate"
+      values="0,-400;0,400"
+      dur="4.5s"
+      repeatCount="indefinite"/>
+  </line>
 
-  <!-- Neon particles -->
-  <g fill="#00eaff">
-    <circle cx="250" cy="80" r="2"/>
-    <circle cx="430" cy="60" r="3"/>
-    <circle cx="710" cy="70" r="2"/>
-    <circle cx="920" cy="90" r="3"/>
-    <circle cx="1050" cy="50" r="2"/>
-  </g>
+</g>
+
+<!-- Skyline -->
+
+<g opacity="0.18">
+
+  <rect x="50" y="220" width="70" height="280" fill="#00F5FF"/>
+  <rect x="180" y="150" width="100" height="350" fill="#00F5FF"/>
+  <rect x="350" y="110" width="90" height="390" fill="#00F5FF"/>
+  <rect x="520" y="170" width="110" height="330" fill="#00F5FF"/>
+  <rect x="1080" y="130" width="80" height="370" fill="#00F5FF"/>
+  <rect x="1250" y="100" width="120" height="400" fill="#00F5FF"/>
+  <rect x="1450" y="220" width="60" height="280" fill="#00F5FF"/>
+
+</g>
+
+<!-- Neon Torii -->
+
+<g filter="url(#neonGlow)">
+
+  <!-- Roof -->
+
+  <rect x="430"
+        y="80"
+        width="740"
+        height="30"
+        rx="6"
+        fill="#0B1120"
+        stroke="url(#neonGradient)"
+        stroke-width="3">
+
+      <animate attributeName="stroke-opacity"
+               values="0.7;1;0.7"
+               dur="3s"
+               repeatCount="indefinite"/>
+
+  </rect>
+
+  <!-- Roof wings -->
+
+  <path d="M430 80
+           Q350 50 300 65
+           L300 110
+           Q350 125 430 110 Z"
+        fill="#0B1120"
+        stroke="#FF006E"
+        stroke-width="3"/>
+
+  <path d="M1170 80
+           Q1250 50 1300 65
+           L1300 110
+           Q1250 125 1170 110 Z"
+        fill="#0B1120"
+        stroke="#FF006E"
+        stroke-width="3"/>
+
+  <!-- Crossbeam -->
+
+  <rect x="500"
+        y="180"
+        width="600"
+        height="22"
+        fill="#0B1120"
+        stroke="#00F5FF"
+        stroke-width="2"/>
+
+  <!-- Pillars -->
+
+  <rect x="520"
+        y="100"
+        width="90"
+        height="260"
+        fill="url(#circuitPattern)"
+        stroke="url(#neonGradient)"
+        stroke-width="3"/>
+
+  <rect x="990"
+        y="100"
+        width="90"
+        height="260"
+        fill="url(#circuitPattern)"
+        stroke="url(#neonGradient)"
+        stroke-width="3"/>
+
+  <!-- Username plaque -->
+
+  <rect x="690"
+        y="115"
+        width="220"
+        height="90"
+        rx="6"
+        fill="#020617"
+        stroke="#FF006E"
+        stroke-width="2"/>
+
+  <text x="800"
+        y="168"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="28"
+        fill="#00F5FF">
+
+        kizuna
+
+        <animate attributeName="opacity"
+                 values="1;0.75;1"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+
+  </text>
+
+</g>
+
+<!-- Tagline -->
+
+<text x="800"
+      y="410"
+      text-anchor="middle"
+      font-family="monospace"
+      font-size="22"
+      fill="#FF006E"
+      filter="url(#neonGlow)">
+
+AI • SCRAPPER • AUTOMATION • BOUNDLESS
+
+</text>
+
+<!-- Floating particles -->
+
+<g fill="#00F5FF">
+
+  <circle cx="250" cy="120" r="3">
+    <animate attributeName="cy"
+             values="120;90;120"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1350" cy="170" r="4">
+    <animate attributeName="cy"
+             values="170;130;170"
+             dur="5s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1200" cy="80" r="2">
+    <animate attributeName="cy"
+             values="80;50;80"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="400" cy="200" r="2">
+    <animate attributeName="cy"
+             values="200;160;200"
+             dur="6s"
+             repeatCount="indefinite"/>
+  </circle>
+
+</g>
+
+<!-- Ground glow -->
+
+<ellipse cx="800"
+         cy="430"
+         rx="420"
+         ry="35"
+         fill="#00F5FF"
+         opacity="0.15">
+
+  <animate attributeName="opacity"
+           values="0.08;0.2;0.08"
+           dur="4s"
+           repeatCount="indefinite"/>
+
+</ellipse>
 
 </svg>
