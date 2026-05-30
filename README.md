@@ -12,7 +12,7 @@ Enter Kizuna.
 
 Kizuna is an autonomous, multi-agent intelligence suite that acts as a digital forensic investigator. It bypasses regional constraints to weaponize native-language data, transforming hidden risks into boardroom-ready intelligence.
 
-We don't just bridge the language barrier. We eliminate the blind spot before you sign the contract.
+We don't just bridge the language barrier. We eliminate the blind spot before you sign the contract. try now : https://kizunaveins-garden.streamlit.app
 ---
 
 ## 🚀 Hackathon Sponsor Integrations & Core Pillars
