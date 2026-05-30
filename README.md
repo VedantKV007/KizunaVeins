@@ -1,4 +1,6 @@
-![kizuna's github banner]([https://raw.githubusercontent.com/VedantKV007/VedantKV007/master/banner.svg])
+<p align="center">
+  <img src="https://raw.githubusercontent.com/VedantKV007/VedantKV007/main/banner.svg" alt="kizuna banner" width="100%"/>
+</p>
 
 # Kizuna 絆: Cross-Border Strategic Intelligence Suite
 Every Western tech giant relies on Asian supply chains—Taiwan for chips, Korea for displays, and Japan for precision robotics. But when American enterprises review overseas bids, they are flying blind.
