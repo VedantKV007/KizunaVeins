@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" width="100%">
+  <img src="https://github.com/VedantKV007/KizunaVeins/blob/master/banner.svg" alt="kizuna banner" width="100%"/>
 </p>
 
 
