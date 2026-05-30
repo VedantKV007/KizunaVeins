@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./torii.svg" width="400" alt="Kizuna Torii Gate Banner">
+  <img src="torii.svg" width="400" alt="Kizuna Torii Gate Banner">
 </p>
 
 # Kizuna 絆: Cross-Border Strategic Intelligence Suite
