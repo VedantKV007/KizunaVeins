@@ -1,3 +1,23 @@
+<p align="center">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" max-width="500" style="background: transparent;">
+    <!-- Top Curved Beam (Kasagi) -->
+    <path d="M 120 30 Q 200 38 280 30 L 283 38 Q 200 46 117 38 Z" fill="#E63946" />
+    <!-- Second Horizontal Beam (Nuki) -->
+    <rect x="130" y="52" width="140" height="6" fill="#E63946" />
+    <!-- Left Pillar -->
+    <path d="M 150 42 L 145 110 L 153 110 L 156 42 Z" fill="#E63946" />
+    <!-- Right Pillar -->
+    <path d="M 250 42 L 255 110 L 247 110 L 244 42 Z" fill="#E63946" />
+    <!-- Center Block (Gakuzuka) -->
+    <rect x="196" y="38" width="8" height="15" fill="#E63946" />
+    <!-- Pillar Bases (Daiishi) -->
+    <rect x="142" y="106" width="13" height="5" fill="#1D3557" />
+    <rect x="245" y="106" width="13" height="5" fill="#1D3557" />
+    <!-- Sun/Background Accent -->
+    <circle cx="200" cy="75" r="22" fill="#E63946" opacity="0.15" />
+  </svg>
+</p>
+
 # Kizuna 絆: Cross-Border Strategic Intelligence Suite
 Every Western tech giant relies on Asian supply chains—Taiwan for chips, Korea for displays, and Japan for precision robotics. But when American enterprises review overseas bids, they are flying blind.
 
