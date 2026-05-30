@@ -1,17 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
-  <!-- Top Curved Beam (Kasagi) -->
-  <path d="M 120 30 Q 200 38 280 30 L 283 38 Q 200 46 117 38 Z" fill="#E63946" />
-  <!-- Second Horizontal Beam (Nuki) -->
-  <rect x="130" y="52" width="140" height="6" fill="#E63946" />
-  <!-- Left Pillar -->
-  <path d="M 150 42 L 145 110 L 153 110 L 156 42 Z" fill="#E63946" />
-  <!-- Right Pillar -->
-  <path d="M 250 42 L 255 110 L 247 110 L 244 42 Z" fill="#E63946" />
-  <!-- Center Block (Gakuzuka) -->
-  <rect x="196" y="38" width="8" height="15" fill="#E63946" />
-  <!-- Pillar Bases (Daiishi) -->
-  <rect x="142" y="106" width="13" height="5" fill="#1D3557" />
-  <rect x="245" y="106" width="13" height="5" fill="#1D3557" />
-  <!-- Sun/Background Accent -->
-  <circle cx="200" cy="75" r="22" fill="#E63946" opacity="0.15" />
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="100%" stop-color="#ff006e"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="circuit" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M10 10 H40 V30 H70"
+            stroke="#00eaff"
+            stroke-width="2"
+            fill="none"
+            opacity="0.4"/>
+      <circle cx="40" cy="30" r="3" fill="#00eaff"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Futuristic skyline -->
+  <g opacity="0.25">
+    <rect x="100" y="300" width="60" height="250" fill="#00eaff"/>
+    <rect x="220" y="220" width="80" height="330" fill="#00eaff"/>
+    <rect x="380" y="180" width="100" height="370" fill="#00eaff"/>
+    <rect x="700" y="200" width="70" height="350" fill="#00eaff"/>
+    <rect x="900" y="140" width="120" height="410" fill="#00eaff"/>
+    <rect x="1080" y="260" width="60" height="290" fill="#00eaff"/>
+  </g>
+
+  <!-- Torii Gate -->
+  <g filter="url(#glow)">
+
+    <!-- Top beam -->
+    <rect x="220" y="120"
+          width="760"
+          height="50"
+          rx="8"
+          fill="#101827"
+          stroke="url(#neon)"
+          stroke-width="4"/>
+
+    <!-- Curved roof extensions -->
+    <path d="M220 120
+             Q150 90 120 100
+             L120 140
+             Q160 150 220 170 Z"
+          fill="#101827"
+          stroke="#ff006e"
+          stroke-width="3"/>
+
+    <path d="M980 120
+             Q1050 90 1080 100
+             L1080 140
+             Q1040 150 980 170 Z"
+          fill="#101827"
+          stroke="#ff006e"
+          stroke-width="3"/>
+
+    <!-- Secondary beam -->
+    <rect x="280" y="240"
+          width="640"
+          height="40"
+          fill="#101827"
+          stroke="#00eaff"
+          stroke-width="3"/>
+
+    <!-- Pillars -->
+    <rect x="320" y="170"
+          width="90"
+          height="420"
+          fill="url(#circuit)"
+          stroke="url(#neon)"
+          stroke-width="4"/>
+
+    <rect x="790" y="170"
+          width="90"
+          height="420"
+          fill="url(#circuit)"
+          stroke="url(#neon)"
+          stroke-width="4"/>
+
+    <!-- Center plaque -->
+    <rect x="525"
+          y="155"
+          width="150"
+          height="120"
+          fill="#0f172a"
+          stroke="#ff006e"
+          stroke-width="3"/>
+
+    <text x="600"
+          y="205"
+          text-anchor="middle"
+          font-size="32"
+          fill="#ff006e"
+          font-family="monospace">
+      未来
+    </text>
+
+    <text x="600"
+          y="245"
+          text-anchor="middle"
+          font-size="24"
+          fill="#00eaff"
+          font-family="monospace">
+      Garden
+    </text>
+
+  </g>
+
+  <!-- Ground reflection -->
+  <ellipse cx="600"
+           cy="680"
+           rx="350"
+           ry="60"
+           fill="#00eaff"
+           opacity="0.15"/>
+
+  <!-- Neon particles -->
+  <g fill="#00eaff">
+    <circle cx="250" cy="80" r="2"/>
+    <circle cx="430" cy="60" r="3"/>
+    <circle cx="710" cy="70" r="2"/>
+    <circle cx="920" cy="90" r="3"/>
+    <circle cx="1050" cy="50" r="2"/>
+  </g>
+
 </svg>
